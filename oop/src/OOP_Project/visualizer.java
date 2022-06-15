@@ -2,27 +2,28 @@ package OOP_Project;
 import javax.swing.*;
 import java.awt.*;
 
+//Inherit JFrame class and as a result taking in JFrame's methods
 public class visualizer extends JFrame {
+    //Initialize window size
     public static final int width = 600;
     public static final int height = 600;
-    private sorting sorting;
-    JButton button;
+    //Initialize JPanel
     private sorting panel = new sorting();
-
-    public visualizer(){
+    //Standard window code for title and showing JPanel contents
+    public visualizer() {
         this.setTitle("Sorting");
-        this.getContentPane().setPreferredSize(new Dimension( 603, 603));
+        this.getContentPane().setPreferredSize(new Dimension(603, 603));
+        //Implement JPanel
         this.getContentPane().add(panel);
         this.setVisible(true);
+        //Makes sure that the window size is at or above its preferred size in line 15
         this.pack();
-        panel.repaint();
+        this.repaint();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public sorting getPanel(){
-        return this.panel;
-    }
-    public static void main(String[] args){
-        visualizer visualizer = new visualizer();
+    public static void main(String[] args) {
+        new visualizer();
     }
 }
+
