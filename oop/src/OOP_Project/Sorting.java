@@ -42,13 +42,12 @@ public class Sorting extends JPanel {
     }
 
     //Shuffle Method
-    void shuffle() {
+    public void shuffle() {
         shuffle = new SwingWorker<>() {
-            @Override
             protected Void doInBackground() throws InterruptedException {
                 //Randomises the indexes
                 for (int i = 0; i < numLines; i++) {
-                    int swapindex = rand.nextInt(numLines - 1);
+                    int swapindex = rand.nextInt(numLines);
                     int temp = array[i];
                     array[i] = array[swapindex];
                     array[swapindex] = temp;
@@ -126,11 +125,10 @@ public class Sorting extends JPanel {
             protected Void doInBackground() throws InterruptedException {
                 // One by one move boundary of unsorted subarray
                 int n = arr.length;
-                for (int i = 0; i < n-1; i++)
-                {
+                for (int i = 0; i < n - 1; i++) {
                     // Find the minimum element in unsorted array
                     int min_idx = i;
-                    for (int j = i+1; j < n; j++)
+                    for (int j = i + 1; j < n; j++)
                         if (arr[j] < arr[min_idx])
                             min_idx = j;
 
@@ -139,9 +137,9 @@ public class Sorting extends JPanel {
                     int temp = arr[min_idx];
                     arr[min_idx] = arr[i];
                     arr[i] = temp;
+                    Thread.sleep(10);
+                    repaint();
                 }
-                Thread.sleep(1);
-                repaint();
                 return null;
             }
         };selectionsort.execute();
