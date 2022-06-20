@@ -1,5 +1,5 @@
 # OOP_Project_DataVisualizerSortingAlgorithms
-##Data Visualizer
+## Data Visualizer
 Visualizer.java contains the runner code with JFrame from Java Swing and Sorting.java contains the JPanel and the following algorithms
 *Bubble Sort
 *Insertion Sort
