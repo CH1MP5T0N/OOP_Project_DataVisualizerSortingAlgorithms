@@ -3,8 +3,8 @@
 Visualizer.java contains the runner code with JFrame from Java Swing and Sorting.java contains the JPanel and the following algorithms
 * Bubble Sort
 * Insertion Sort
-* Selection Sort
-<br>
+* Selection Sort\n
+
 *Docs file contains documentation and gif while the oop file contains the java files*
 ### Video Demo:
 https://drive.google.com/file/d/1rqHsiTldQLWUCArnst_JbigCup46Omzh/view?usp=sharing
